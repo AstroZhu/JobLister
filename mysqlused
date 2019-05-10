@@ -1,0 +1,29 @@
+create table categories(
+id int(11) not null,
+name varchar(255) not null
+) engine=innoDB charset=latin1;
+
+create table jobs(
+id int(11) not null,
+category_id int(11) not null,
+comapny varchar(255) not null,
+job_title varchar(255) not null,
+description  varchar(255) not null,
+salary varchar(255) not null,
+location varchar(255) not null,
+
+contact_user varchar(255) not null,
+contact_email varchar(255) not null
+    )engine=innoDB charset=latin1;
+
+alter table categories
+add primary key(id);
+
+alter table jobs
+add primary key(id);
+
+alter table categories
+modify id int(11) not null auto_increment;
+
+alter table jobs
+modify id int(11) not null auto_increment;
